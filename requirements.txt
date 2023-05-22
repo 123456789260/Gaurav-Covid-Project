@@ -1,0 +1,7 @@
+streamlit
+numpy
+deta
+Keras-Preprocessing
+keras-models
+tensorflow
+gdown
