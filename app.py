@@ -67,13 +67,13 @@ def predict_img(img):
     img = np.expand_dims(img, axis=0)
     result = model.predict(img)
     result = np.argmax(result, axis=-1)
-    target_names = ["Normal","Viral Pneumonia","COVID"]
+    target_names = ["Normal","Viral Pneumonia","COVID-19"]
     return target_names[result[0]]
 
 html_temp = """
     <div style="background-color:#2F3C7E;padding:10px;margin-bottom: 25px">
-    <h2 style="color:white;text-align:center;">COVID Detection</h2>
-    <p style="color:white;text-align:center;" >This is a <b>Streamlit</b> app use for prediction of the <b> COVID-19</b>.</p>
+    <h2 style="color:white;text-align:center;">COVID-19 Detection</h2>
+    <p style="color:white;text-align:center;" >This is a <b>CovScan</b> tool used for prediction of the <b> COVID-19</b>.</p>
     </div>
     """
 st.markdown(html_temp,unsafe_allow_html=True)
